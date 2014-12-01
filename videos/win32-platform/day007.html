@@ -1,0 +1,296 @@
+<html>
+<head>
+    <title>Initializing DirectSound | Handmade Companion</title>
+    <meta name="generator" content="DocPad v6.69.1" />
+    <link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/styles/style.css" />
+    <script src="/vendor/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <div id="outer_holder">
+        <div class="back">
+            <div class="outer">
+                <div id="player-wrapper">
+    <div id="player" class="medium" data-video-id="qGC3xiliJW8"></div>
+</div>
+
+
+<nav class="timecodes">
+    <ul name="markers">
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="0:53">
+                Fix: Windows API return values and stubs (0:53)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="2:29">
+                Fix: XInput on Windows 8 (2:29)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="3:48">
+                Fix: Restore Alt-F4 functionality (3:48)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="9:21">
+                Bool datatype idiosyncraries (9:21)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="12:55">
+                Review Alt-F4 fix (12:55)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="13:55">
+                Foreshadowing an XInput performance issue (13:55)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="16:44">
+                Intro to sound programming for games (16:44)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="23:55">
+                Initializing DirectSound Overview (23:55)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="27:03">
+                Load the library (27:03)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="32:00">
+                Create a DirectSound Object (32:00)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="33:54">
+                Configuring the DirectSound Object (33:54)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="38:04">
+                Creating and Configuring the Primary Buffer (38:04)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="51:36">
+                Creating and Configuring the Secondary Buffer (51:36)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="56:38">
+                Let's try it (56:38)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:00:46">
+                Final Thoughts (1:00:46)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:02:05">
+                Start of Q&amp;A (1:02:05)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:04:05">
+                Fixing WaveFormat order (1:04:05)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:06:07">
+                Do you use data-structures like linked-list, binary trees..? (1:06:07)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:06:34">
+                Can you explain again why you need two buffers instead of just doing everything in one? (1:06:34)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:09:23">
+                Are there any case we'd want more than two [audio] channels? (1:09:23)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:11:05">
+                If the framerate would ever drop, can there be audio dropouts? (1:11:05)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:13:41">
+                The nBlockAlign and nAverageBytesPerSecond are redundant. (1:13:41)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:14:57">
+                On Linux will we be doing ALSA or higher level like PulseAudio/Jack? (1:14:57)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:16:00">
+                What newer sound API would you recommend instead of old DirectSound? (1:16:00)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:16:46">
+                The two second buffer doesn't sound acceptable / not-noticeable if you're playing music. (1:16:46)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:17:27">
+                Have or do you work in the industry? (1:17:27)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:17:54">
+                Have you thought about guest programmers tagging in to teach things like linux or whatever topic is their expertise? (1:17:54)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:18:35">
+                VirtualAlloc: MEM_COMMIT to MEM_RESERVE|MEM_COMMIT (1:18:35)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:20:23">
+                About game development as a career field (1:20:23)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:22:57">
+                Will you show us how to use bone animations or will you use spritesheets? (1:22:57)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:24:15">
+                More on our usage of DirectSound (Not a buffer) (1:24:15)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:25:33">
+                About game programming optimisation (1:25:33)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:27:56">
+                Why don't we use the second buffer to grab the handle instead of creating something just to grab a handle? (1:27:56)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:29:26">
+                Isn't this learning how to carve stone with chisel instead of using modern machinery? (1:29:26)
+            </a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+<article id="video-notes">
+    <h1>Initializing DirectSound</h1>
+    <h3 id="input-cleanup-and-fixes">Input Cleanup and Fixes</h3>
+<p>This episode starts with some cleanup and fixes to the input handling code from yesterday.</p>
+<ul>
+<li>Windows API often uses a <code>0</code> return value to indicate success. Our stubs probably shouldn&#39;t return <code>0</code>.</li>
+<li>Windows 8 ships with <code>xinput1_4.dll</code> only. So we need to try each version in turn</li>
+<li>When you handle WM_SYSKEY* messages, you lose built in Alt-F4 functionality, and have to reimplement it.</li>
+</ul>
+<h3 id="sound-programming-for-games">Sound Programming for Games</h3>
+<p>Casey starts with a high level overview of sound programing for games. The key ideas here are that we are allocating a <a href="http://en.wikipedia.org/wiki/Circular_buffer">circular buffer</a> for sound, and the system will play it continually on a loop. If you haven&#39;t worked with circular buffers (or ring buffers) before, much of this code will be confusing. It&#39;s worth taking some time to familiarize yourself with them.</p>
+<p>Resources:</p>
+<ul>
+<li><a href="http://c.learncodethehardway.org/book/ex44.html">Ring Buffers</a> on &quot;Learn C The Hard Way&quot;</li>
+</ul>
+<h3 id="working-with-directsound">Working with DirectSound</h3>
+<p>The basic process for initializing DirectSound is as follows:</p>
+<ol>
+<li>Load the Library - <code>LoadLibrary(&quot;dsound.dll&quot;)</code></li>
+<li>Create a DirectSound object - <code>DirectSoundCreate()</code> (<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.directx_sdk.reference.directsoundcreate8.aspx">docs</a>)</li>
+<li>Set the Cooperative Level - <code>IDirectSound8::SetCooperativeLevel()</code> (<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.directx_sdk.idirectsound8.idirectsound8.setcooperativelevel.aspx">docs</a>)</li>
+<li>&quot;Create&quot; a primary buffer - <code>IDirectSound8::CreateSoundBuffer()</code> (<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.directx_sdk.idirectsound8.idirectsound8.createsoundbuffer.aspx">docs</a>)</li>
+<li>Create a secondary buffer</li>
+<li>Tell DirectSound to start playing the secondary buffer - <code>IDirectSoundBuffer8::Play()</code> (<a href="http://msdn.microsoft.com/en-us/library/microsoft.directx_sdk.idirectsoundbuffer8.idirectsoundbuffer8.play.aspx">docs</a>)</li>
+</ol>
+<p>In the next episode we will look closely at how to fill this buffer and implement it in the game loop</p>
+
+</article>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li id="sitelabel">
+                    Handmade Hero Central
+                </li>
+                <li>
+                    <a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=8">News</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_content&amp;view=article&amp;id=6">Episode Guide</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_content&amp;view=article&amp;id=8">Coding Resources</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_kunena&amp;view=category&amp;catid=4">Code Discussion</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_kunena&amp;view=category&amp;catid=5">Game Discussion</a>
+                </li>      
+            </ul>
+        </nav>
+    </header>
+
+    
+        <script type="text/javascript" src="/scripts/video.js"></script>
+    
+        <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    
+
+    
+</body>
+</html>

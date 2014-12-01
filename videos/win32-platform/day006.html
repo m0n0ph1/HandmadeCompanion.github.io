@@ -1,0 +1,302 @@
+<html>
+<head>
+    <title>Gamepad and Keyboard Input | Handmade Companion</title>
+    <meta name="generator" content="DocPad v6.69.1" />
+    <link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/styles/style.css" />
+    <script src="/vendor/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <div id="outer_holder">
+        <div class="back">
+            <div class="outer">
+                <div id="player-wrapper">
+    <div id="player" class="medium" data-video-id="J3y1x54vyIQ"></div>
+</div>
+
+
+<nav class="timecodes">
+    <ul name="markers">
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="0:51">
+                Getting input from a gamepad: XInput (0:51)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="3:20">
+                Using XInput in the codebase (3:20)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="6:26">
+                A look at the XInput API more in depth. (6:26)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="7:40">
+                Programming using XInput API (7:40)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="9:09">
+                Discussing the controller's state: using XINPUT_STATE struct (9:09)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="11:30">
+                Using XINPUT_GAMEPAD struct (11:30)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="16:57">
+                Handling unresolved external symbol XInputGetState (16:57)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="26:03">
+                Discussing access violations (26:03)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="26:52">
+                Safeguarding against access violations (26:52)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="31:50">
+                Defining and implementing Win32LoadXinput function (31:50)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="37:22">
+                Playing with the X and Y offset (37:22)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="38:00">
+                Casey looking for his gamepad (38:00)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="38:50">
+                Casey showcases pink controller (38:50)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="41:09">
+                XINPUT_VIBRATION (41:09)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="43:05">
+                #milkhit (43:05)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="46:55">
+                Testingand handling button/key presses (46:55)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="55:10">
+                (Extra) ANSI String Handling (55:10)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="56:10">
+                (Extra) Not passing something by value anymore (56:10)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="58:10">
+                Summary and things to come before beginning Q&amp;A (58:10)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="59:08">
+                LParam 30 is always up for WM_KEYUP (59:08)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="59:57">
+                Why uppercase variable names? (59:57)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:00:21">
+                Can you explain your macro and referencing XInput functions again? (1:00:21)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:03:15">
+                What's the size when copying becomes problematic for a struct? (1:03:15)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:04:27">
+                About (premature) optimisation (1:04:27)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:08:27">
+                How does the linker find the XInput DLL on the users machine? [...] Can we distribute the DLL? (1:08:27)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:12:52">
+                Is [the dynamic linker] allowed to link XInput in compile time? (1:12:52)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:14:02">
+                Why you chose an if-else cascade for key input instead of switch statement? It's up for grabs. (1:14:02)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:15:13">
+                How do you know the XInput stub things work without testing it on XP computer without XInput installed? (1:15:13)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:17:03">
+                Is it a waste of time to check if GetProcAddress() returns zero? (1:17:03)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:19:12">
+                Modify code to use the controller stick (1:19:12)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:22:14">
+                Where do the WParam and LParam come from? (1:22:14)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:24:17">
+                Why did MS decide to use link and import library instead of true dynamic linking? (1:24:17)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:25:13">
+                When are we going to get naysayer[Jonathan Blow] and cmuratori combination game? (1:25:13)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:26:19">
+                On Unix you don't need to link to a .so file at all to use a .so file where as on MS platforms you need a .lib file (1:26:19)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:27:33">
+                In the far future will you use DirectX or OpenGL or what? (1:27:33)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:28:05">
+                We will be drawing the whole screen every frame. (1:28:05)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:28:47">
+                Why does Valgrind make it look so scary when you don't free()? (1:28:47)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:29:48">
+                It looks like WParam and LParam are 32bit on XP (1:29:48)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:30:12">
+                Is it possible to keep your framerate consistent while dragging the window around? Doing repaint on WM_MOVE is slow. (1:30:12)
+            </a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+<article id="video-notes">
+    <h1>Gamepad and Keyboard Input</h1>
+    
+</article>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li id="sitelabel">
+                    Handmade Hero Central
+                </li>
+                <li>
+                    <a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=8">News</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_content&amp;view=article&amp;id=6">Episode Guide</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_content&amp;view=article&amp;id=8">Coding Resources</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_kunena&amp;view=category&amp;catid=4">Code Discussion</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_kunena&amp;view=category&amp;catid=5">Game Discussion</a>
+                </li>      
+            </ul>
+        </nav>
+    </header>
+
+    
+        <script type="text/javascript" src="/scripts/video.js"></script>
+    
+        <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,306 @@
+<html>
+<head>
+    <title>Writing a Square Wave to DirectSound | Handmade Companion</title>
+    <meta name="generator" content="DocPad v6.69.1" />
+    <link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/styles/style.css" />
+    <script src="/vendor/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <div id="outer_holder">
+        <div class="back">
+            <div class="outer">
+                <div id="player-wrapper">
+    <div id="player" class="medium" data-video-id="uiW1D1Vc7IQ"></div>
+</div>
+
+
+<nav class="timecodes">
+    <ul name="markers">
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:04">
+                Review of DirectSound init (1:04)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="2:16">
+                Tangent: methods and vtables (2:16)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="8:52">
+                Resume review of DirectSound init (8:52)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="14:21">
+                Writing to the sound buffer (14:21)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="16:09">
+                Discussion of waveforms for testing (16:09)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="17:02">
+                Locking the buffer (17:02)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="18:19">
+                Dealing with buffer pointers and locks (18:19)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="21:09">
+                The Lock() call (21:09)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="22:59">
+                Filling the buffer regions (22:59)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="26:49">
+                Generating a test tone (26:49)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="35:28">
+                Getting the WritePointer and BytesToWrite (35:28)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="48:21">
+                Refine square wave formula (48:21)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="51:39">
+                Review the code (51:39)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="56:04">
+                Start DirectSound playing (56:04)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="57:27">
+                HOLD YOUR EARS (57:27)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="58:22">
+                HOLD YOUR EARS (58:22)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="59:22">
+                Don't forget to Unlock the buffer (59:22)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:00:58">
+                Final Thoughts (1:00:58)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:02:17">
+                Review of mod operation and how we used it (1:02:17)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:10:30">
+                Start of Q&amp;A (1:10:30)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:11:09">
+                Will future broacasts use this Europe-friendly time? (1:11:09)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:11:21">
+                Why not XAudio2? (1:11:21)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:12:43">
+                Are we going to factor sound playing to a seperate function? (1:12:43)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:13:45">
+                Will we rename GlobalSecondaryBuffer? (1:13:45)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:14:10">
+                Challenge: XAudio2 is supported on XP (1:14:10)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:14:49">
+                Why keyboard events instead of polling? (1:14:49)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:15:24">
+                Will we be able to remap keys? (1:15:24)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:15:43">
+                Doesn't the size of the buffer increase latency? (1:15:43)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:16:53">
+                Will we write audio filters, like reverb? (1:16:53)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:17:16">
+                Will we factor the code into seperate files? (1:17:16)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:18:06">
+                It takes about a second to start playing, is that expected? (1:18:06)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:22:39">
+                Can you show a sine wave as well? (1:22:39)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:23:02">
+                What is acceptable latency? (1:23:02)
+            </a>
+        </li>
+    
+        <li>
+            <a href="#" class="marker-time" data-human-timecode="1:29:04">
+                No Poop Sauce (1:29:04)
+            </a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+<article id="video-notes">
+    <h1>Writing a Square Wave to DirectSound</h1>
+    <h3 id="directsound-is-object-oriented">DirectSound is Object Oriented</h3>
+<p>DirectSound in an object-oriented API. What does that mean? Casey starts this episode with a discussion of &quot;method&quot; dispatch through vtables, and why c++ virtual calls are costly.</p>
+<h3 id="reviewing-directsound-inititalization">Reviewing DirectSound Inititalization</h3>
+<p>The basic process for initializing DirectSound is as follows:</p>
+<ol>
+<li>Load the Library - <code>LoadLibrary(&quot;dsound.dll&quot;)</code></li>
+<li>Create a DirectSound object - <code>DirectSoundCreate()</code> (<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.directx_sdk.reference.directsoundcreate8.aspx">docs</a>)</li>
+<li>Set the Cooperative Level - <code>IDirectSound8::SetCooperativeLevel()</code> (<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.directx_sdk.idirectsound8.idirectsound8.setcooperativelevel.aspx">docs</a>)</li>
+<li>&quot;Create&quot; a primary buffer - <code>IDirectSound8::CreateSoundBuffer()</code> (<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.directx_sdk.idirectsound8.idirectsound8.createsoundbuffer.aspx">docs</a>)</li>
+<li>Create a secondary buffer</li>
+<li>Tell DirectSound to start playing the secondary buffer - <code>IDirectSoundBuffer8::Play()</code> (<a href="http://msdn.microsoft.com/en-us/library/microsoft.directx_sdk.idirectsoundbuffer8.idirectsoundbuffer8.play.aspx">docs</a>)</li>
+</ol>
+<h3 id="playing-sounds">Playing sounds</h3>
+<p>Audio is a complicated topic, and we start with a discussion of audio &quot;waveforms&quot; and how PCM audio data is encoded in memory.</p>
+<ul>
+<li>A square wave oscillates between &quot;full-positive&quot; to &quot;full-negative&quot; every half period</li>
+<li>A Stereo (2-channel) 16-bit PCM audio buffer is arranged as an array of signed int16 values in (left channel value, right channel value) pairs</li>
+<li>A &quot;sample&quot; sometimes refers to the values for all channels in a sampling period, and sometimes a value for a single channel. Be careful.</li>
+</ul>
+<p>The procedure for writing sound data into a buffer is as follows</p>
+<ol>
+<li>Figure out where in the buffer you want to start writing, and how much data you want to write<ul>
+<li>Its useful to look at the play cursor - <code>IDirectSoundBuffer8::GetCurrentPosition()</code> (<a href="http://msdn.microsoft.com/en-us/library/microsoft.directx_sdk.idirectsoundbuffer8.idirectsoundbuffer8.getcurrentposition.aspx">docs</a>)</li>
+</ul>
+</li>
+<li>Acquire a lock on the buffer - <code>IDirectSoundBuffer8::Lock()</code> (<a href="http://msdn.microsoft.com/en-us/library/microsoft.directx_sdk.idirectsoundbuffer8.idirectsoundbuffer8.unlock.aspx">docs</a>)<ul>
+<li>Because we are working with a circular buffer, this call will return 1 or 2 writable regions</li>
+</ul>
+</li>
+<li>Write the samples to the buffer</li>
+<li>Unlock the regions - <code>IDirectSoundBuffer8::Unlock()</code> (<a href="http://msdn.microsoft.com/en-us/library/microsoft.directx_sdk.idirectsoundbuffer8.idirectsoundbuffer8.unlock.aspx">docs</a>)</li>
+</ol>
+<h3 id="a-note-on-audio-latency">A note on audio latency</h3>
+<p>Audio latency is determined not by the size of the buffer, but by how far ahead of the PlayCursor you write. The optimal amount of latency is the amount that will cause this frame&#39;s audio to coincide with the display of this frame&#39;s image. On most platforms, it is very difficult to ascertain the proper amount of latency. It&#39;s an unsolved problem, and games with need precise AV sync (like Guitar Hero) go to some lengths to achieve it.</p>
+
+</article>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li id="sitelabel">
+                    Handmade Hero Central
+                </li>
+                <li>
+                    <a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=8">News</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_content&amp;view=article&amp;id=6">Episode Guide</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_content&amp;view=article&amp;id=8">Coding Resources</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_kunena&amp;view=category&amp;catid=4">Code Discussion</a>
+                </li>
+                <li>
+                    <a href="/index.php?option=com_kunena&amp;view=category&amp;catid=5">Game Discussion</a>
+                </li>      
+            </ul>
+        </nav>
+    </header>
+
+    
+        <script type="text/javascript" src="/scripts/video.js"></script>
+    
+        <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    
+
+    
+</body>
+</html>
